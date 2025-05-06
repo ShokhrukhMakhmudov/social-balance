@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1092.1 817.74">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient-4);
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        fill: url(#linear-gradient-2);
+      }
+
+      .cls-3 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-4 {
+        fill: url(#linear-gradient-3);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="507.58" y1="751.52" x2="96.77" y2="641.44" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#fff"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="667.01" y1="416.18" x2="810.12" y2="703.81" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-3" x1="584.52" y1="66.32" x2="995.34" y2="176.4" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-4" x1="420.59" y1="401.56" x2="277.48" y2="113.94" xlink:href="#linear-gradient"/>
+  </defs>
+  <g id="_Слой_1" data-name="Слой 1">
+    <g>
+      <path class="cls-3" d="M365.95,813.11H0l62.5-233.24H604.35l-15.37,57.34c-25.92,96.75-126.29,175.9-223.03,175.9Z"/>
+      <path class="cls-2" d="M763.34,275.89l-145.19,541.85c419.41,0,353.59-541.85,145.19-541.85Z"/>
+      <path class="cls-4" d="M726.15,4.74h365.95l-62.5,233.24H487.75l15.37-57.34C529.04,83.89,629.41,4.74,726.15,4.74Z"/>
+      <path class="cls-1" d="M324.26,541.85L469.45,0C50.05,0,115.86,541.85,324.26,541.85Z"/>
+    </g>
+  </g>
+</svg>
