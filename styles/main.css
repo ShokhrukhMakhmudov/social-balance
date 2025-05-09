@@ -13,7 +13,9 @@ body {
   font-weight: 400;
   font-style: normal;
 }
-
+.hero-video {
+  transform: skewX(-5deg) !important;
+}
 @keyframes fade-in {
   from {
     opacity: 0;
@@ -59,4 +61,28 @@ body {
 
 .author span {
   @apply text-gray-400 text-sm font-normal;
+}
+
+/* swiper styles */
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.swiper-pagination-bullet {
+  width: 50px;
+  border-radius: 7px;
+}
+.swiper-pagination-bullet-active {
+  background-color: #fff;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  color: white;
 }

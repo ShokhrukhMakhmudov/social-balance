@@ -18,10 +18,15 @@
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <link rel="stylesheet" href="./styles/main.css" />
+
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
     <!-- AOS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles/main.css" />
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   </head>
   <body
@@ -148,6 +153,8 @@
       </nav>
     </header>
     <main>
+      <!--  -->
+
       <!-- Герой секция с параллакс эффектом -->
       <section class="pt-32 pb-20" id="download">
         <div class="container mx-auto px-6">
@@ -239,19 +246,104 @@
               </div>
             </div>
 
-            <!-- Изображение с 3D эффектом -->
-            <div class="md:w-1/2 relative">
-              <img
+            <!-- Видео -->
+            <div class="w-full md:w-1/2 relative">
+              <video
+                id="heroVideo"
+                class="hero-video mx-auto px-4 max-h-[500px] sm:max-h-[700px] w-full object-cover"
+                onloadeddata="this?.play();"
+                autoplay
+                poster="./images/ic_entry_logo (1).png"
+                onclick="toggleClick(this)"
+                onplaying="hideVideoBtn()"
+                onpause="showVideoBtn()"
+                data-aos="fade-left">
+                <source src="./videos/video.webm" type="video/webm" />
+                <source src="./videos/video.mp4" type="video/mp4" />
+              </video>
+              <span
+                class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-4xl cursor-pointer bg-gradient-to-t from-gray-900/30 to-gray-900/30 rounded-full px-4 pt-3 pb-2 hover:bg-gray-900/30 transition-all duration-300 z-100 scale-[1.3]"
+                id="videoBtn"
+                onclick="playVideo()">
+                <i class="fa-solid fa-play"></i>
+              </span>
+              <!-- <img
                 src="./images/Hero Image.png"
                 class="mx-auto transform hover:rotate-3 hover:scale-105 transition-all duration-500 cursor-grab active:cursor-grabbing"
                 draggable="false"
                 data-aos="fade-down"
-                data-aos-delay="400" />
+                data-aos-delay="400" /> -->
             </div>
           </div>
         </div>
       </section>
 
+      <section
+        class="py-24 bg-gradient-to-b from-gray-900/30 to-transparent relative overflow-hidden">
+        <div class="container mx-auto px-6">
+          <!-- Заголовок -->
+          <div class="max-w-2xl mx-auto mb-16 text-center" data-aos="fade-up">
+            <h2 class="text-4xl md:text-5xl font-bold mb-4">
+              <span
+                class="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+                Новые функции
+              </span>
+            </h2>
+          </div>
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div
+                  class="bg-white/5 p-6 rounded-2xl backdrop-blur-lg border border-white/10">
+                  <img
+                    src="./images/function1.png"
+                    alt="Функция 1"
+                    class="max-w-none h-[400px] object-contain" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div
+                  class="bg-white/5 p-6 rounded-2xl backdrop-blur-lg border border-white/10">
+                  <img
+                    src="./images/function2.png"
+                    alt="Функция 2"
+                    class="max-w-none h-[400px] object-contain" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div
+                  class="bg-white/5 p-6 rounded-2xl backdrop-blur-lg border border-white/10">
+                  <img
+                    src="./images/function3.png"
+                    alt="Функция 3"
+                    class="max-w-none h-[400px] object-contain" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div
+                  class="bg-white/5 p-6 rounded-2xl backdrop-blur-lg border border-white/10">
+                  <img
+                    src="./images/function4.png"
+                    alt="Функция 4"
+                    class="max-w-none h-[400px] object-contain" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div
+                  class="bg-white/5 p-6 rounded-2xl backdrop-blur-lg border border-white/10">
+                  <img
+                    src="./images/function5.png"
+                    alt="Функция 5"
+                    class="max-w-none h-[400px] object-contain" />
+                </div>
+              </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination -mb-3"></div>
+          </div>
+        </div>
+      </section>
       <section class="py-24 bg-gradient-to-t from-gray-900/30 to-transparent">
         <div class="container mx-auto px-6">
           <div class="grid md:grid-cols-3 gap-8">
@@ -683,6 +775,7 @@
         </div>
       </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
       AOS.init({
         duration: 800,
@@ -691,6 +784,23 @@
         offset: 120,
       });
 
+      function toggleClick(video) {
+        if (video.paused) {
+          video.play();
+        } else {
+          video.pause();
+        }
+      }
+      function hideVideoBtn() {
+        document.getElementById("videoBtn").classList.add("hidden");
+      }
+      function showVideoBtn() {
+        document.getElementById("videoBtn").classList.remove("hidden");
+      }
+
+      function playVideo() {
+        document.getElementById("heroVideo").play();
+      }
       document.addEventListener("alpine:init", () => {
         Alpine.data("slider", () => ({
           currentIndex: 0,
@@ -735,6 +845,38 @@
               (this.currentIndex - 1 + this.slides.length) % this.slides.length;
           },
         }));
+      });
+
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        freeMode: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 40,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 50,
+          },
+        },
       });
     </script>
   </body>
