@@ -3,8 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Family Balance App</title>
-    <link rel="shortcut icon" href="./images/icon.svg" type="image/x-icon" />
+    <title>
+      Family Balance App - Бесплатное приложение для родителей по всему миру
+    </title>
+    <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon" />
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -112,6 +114,15 @@
           opacity: 0;
         }
       }
+
+      .globe-icon {
+        background: conic-gradient(from 0deg, #00a308, #00c40a, #00a308);
+      }
+
+      .free-badge {
+        background: linear-gradient(135deg, #00a308 0%, #00c40a 100%);
+        box-shadow: 0 4px 14px 0 rgba(0, 163, 8, 0.4);
+      }
     </style>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   </head>
@@ -123,14 +134,10 @@
       class="fixed w-full z-50 transition-all duration-500"
       :class="scrolled ? 'nav-scroll shadow-lg' : ''">
       <div class="container mx-auto px-6">
-        <div class="flex items-center justify-between h-20">
+        <div class="flex items-center justify-between">
           <!-- Логотип -->
           <a href="#" class="flex items-center space-x-3 group">
-            <div
-              class="w-10 h-10 bg-accent rounded-xl flex items-center justify-center">
-              <i class="fas fa-family text-white text-xl"></i>
-            </div>
-            <span class="text-xl font-bold">Family Balance App</span>
+            <img class="h-32" src="./images/logo_text.png" alt="logo" />
           </a>
 
           <!-- Десктоп меню -->
@@ -153,7 +160,7 @@
             <a
               href="#download"
               class="px-4 py-2 bg-accent hover:bg-accent-light rounded-xl transition-colors"
-              >Скачать</a
+              >Скачать бесплатно</a
             >
           </div>
 
@@ -197,7 +204,7 @@
               href="#download"
               class="block py-2 bg-accent text-center rounded-xl py-3"
               @click="isOpen = false"
-              >Скачать</a
+              >Скачать бесплатно</a
             >
           </div>
         </div>
@@ -213,20 +220,33 @@
           <div class="flex flex-col lg:flex-row items-center gap-12">
             <!-- Текстовый блок -->
             <div class="lg:w-1/2 space-y-8">
-              <div
-                class="inline-flex items-center gap-2 bg-white/10 rounded-full px-4 py-2 mb-4">
-                <span class="w-2 h-2 bg-accent rounded-full"></span>
-                <span class="text-sm">Забота о вашей семье</span>
+              <div class="flex flex-wrap gap-3">
+                <div
+                  class="inline-flex items-center gap-2 bg-white/10 rounded-full px-4 py-2">
+                  <span class="w-2 h-2 bg-accent rounded-full"></span>
+                  <span class="text-sm">Забота о вашей семье</span>
+                </div>
+                <div
+                  class="free-badge inline-flex items-center gap-2 rounded-full px-4 py-2">
+                  <i class="fas fa-gift"></i>
+                  <span class="text-sm font-medium">Полностью бесплатно</span>
+                </div>
+                <div
+                  class="inline-flex items-center gap-2 bg-white/10 rounded-full px-4 py-2">
+                  <i class="fas fa-globe-americas text-accent"></i>
+                  <span class="text-sm">Работает по всему миру</span>
+                </div>
               </div>
 
               <h1 class="text-5xl md:text-6xl font-bold leading-tight">
-                <span class="text-accent">Баланс</span>
-                для<br />современной<br />семьи
+                <span class="text-accent">Бесплатное</span> приложение<br />для
+                семей по всему<br />миру
               </h1>
 
               <p class="text-xl text-gray-300 leading-relaxed">
-                Помогаем родителям создавать здоровые цифровые привычки у детей
-                и находить гармонию между онлайн-миром и реальной жизнью.
+                Family Balance - полностью бесплатное приложение, которое
+                помогает родителям создавать здоровые цифровые привычки у детей.
+                Доступно для семей по всему миру без скрытых платежей.
               </p>
 
               <!-- Кнопки -->
@@ -250,6 +270,17 @@
                   </div>
                 </a>
               </div>
+
+              <div class="flex items-center gap-4 text-gray-300">
+                <div class="flex items-center gap-2">
+                  <i class="fas fa-check-circle text-accent"></i>
+                  <span>Бесплатно навсегда</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <i class="fas fa-check-circle text-accent"></i>
+                  <span>Работает по всему миру</span>
+                </div>
+              </div>
             </div>
 
             <!-- Изображение -->
@@ -261,7 +292,7 @@
                   class="absolute -bottom-10 -right-10 w-16 h-16 bg-accent/30 rounded-full pulse-ring"
                   style="animation-delay: 1s"></div>
                 <img
-                  src="./images/ic_entry_logo (1).png"
+                  src="./images/logo.png"
                   alt="Family Balance App"
                   class="relative z-10 mx-auto max-w-md" />
               </div>
@@ -275,11 +306,11 @@
         <div class="container mx-auto px-6">
           <div class="text-center max-w-2xl mx-auto mb-16">
             <h2 class="text-4xl md:text-5xl font-bold mb-6">
-              Помогаем вашей семье
+              Мощные функции - полностью бесплатно
             </h2>
             <p class="text-xl text-gray-300">
-              Набор инструментов для создания здоровой цифровой среды в вашем
-              доме
+              Все эти инструменты для создания здоровой цифровой среды в вашем
+              доме доступны без оплаты
             </p>
           </div>
 
@@ -292,10 +323,11 @@
                 <i class="fas fa-shield-alt text-white text-2xl"></i>
               </div>
               <h3 class="text-2xl font-bold mb-4">Защита онлайн</h3>
-              <p class="text-gray-300">
+              <p class="text-gray-300 mb-4">
                 Обеспечьте безопасность детей в интернете с помощью умных
                 фильтров и контроля контента.
               </p>
+              <div class="text-accent font-medium">Бесплатная функция</div>
             </div>
 
             <!-- Функция 2 -->
@@ -306,10 +338,11 @@
                 <i class="fas fa-clock text-white text-2xl"></i>
               </div>
               <h3 class="text-2xl font-bold mb-4">Управление временем</h3>
-              <p class="text-gray-300">
+              <p class="text-gray-300 mb-4">
                 Устанавливайте лимиты использования устройств и приложений для
                 здорового баланса.
               </p>
+              <div class="text-accent font-medium">Бесплатная функция</div>
             </div>
 
             <!-- Функция 3 -->
@@ -322,10 +355,11 @@
               <h3 class="text-2xl font-bold mb-4">
                 Отслеживание местоположения
               </h3>
-              <p class="text-gray-300">
+              <p class="text-gray-300 mb-4">
                 Всегда знайте, где находятся ваши дети, с функцией геолокации в
                 реальном времени.
               </p>
+              <div class="text-accent font-medium">Бесплатная функция</div>
             </div>
 
             <!-- Функция 4 -->
@@ -336,10 +370,11 @@
                 <i class="fas fa-chart-bar text-white text-2xl"></i>
               </div>
               <h3 class="text-2xl font-bold mb-4">Аналитика использования</h3>
-              <p class="text-gray-300">
+              <p class="text-gray-300 mb-4">
                 Получайте подробные отчеты о том, как ваши дети используют свои
                 устройства.
               </p>
+              <div class="text-accent font-medium">Бесплатная функция</div>
             </div>
 
             <!-- Функция 5 -->
@@ -350,9 +385,10 @@
                 <i class="fas fa-sticky-note text-white text-2xl"></i>
               </div>
               <h3 class="text-2xl font-bold mb-4">Семейные заметки</h3>
-              <p class="text-gray-300">
+              <p class="text-gray-300 mb-4">
                 Обменивайтесь сообщениями и напоминаниями прямо в приложении.
               </p>
+              <div class="text-accent font-medium">Бесплатная функция</div>
             </div>
 
             <!-- Функция 6 -->
@@ -363,10 +399,11 @@
                 <i class="fas fa-balance-scale text-white text-2xl"></i>
               </div>
               <h3 class="text-2xl font-bold mb-4">Цифровой баланс</h3>
-              <p class="text-gray-300">
+              <p class="text-gray-300 mb-4">
                 Помогаем найти золотую середину между технологиями и реальным
                 общением.
               </p>
+              <div class="text-accent font-medium">Бесплатная функция</div>
             </div>
           </div>
         </div>
@@ -377,10 +414,11 @@
         <div class="container mx-auto px-6">
           <div class="text-center max-w-2xl mx-auto mb-16">
             <h2 class="text-4xl md:text-5xl font-bold mb-6">
-              Как это работает
+              Начните использовать бесплатно
             </h2>
             <p class="text-xl text-gray-300">
-              Простой процесс настройки и использования приложения
+              Простой процесс настройки и использования приложения - никаких
+              платежей не требуется
             </p>
           </div>
 
@@ -391,7 +429,7 @@
                 <div
                   class="absolute -inset-4 bg-accent/20 rounded-3xl transform rotate-6"></div>
                 <img
-                  src="./images/section1.png"
+                  src="./images/logo.png"
                   alt="Как работает Family Balance"
                   class="relative z-10 rounded-2xl" />
               </div>
@@ -406,9 +444,10 @@
                   1
                 </div>
                 <div>
-                  <h3 class="text-2xl font-bold mb-2">Установите приложение</h3>
+                  <h3 class="text-2xl font-bold mb-2">Скачайте бесплатно</h3>
                   <p class="text-gray-300">
-                    Скачайте Family Balance на свой телефон и телефон ребенка
+                    Установите Family Balance на свой телефон и телефон ребенка
+                    - приложение полностью бесплатное
                   </p>
                 </div>
               </div>
@@ -423,7 +462,7 @@
                   <h3 class="text-2xl font-bold mb-2">Настройте параметры</h3>
                   <p class="text-gray-300">
                     Определите ограничения по времени, фильтры контента и другие
-                    настройки
+                    настройки - все функции доступны бесплатно
                   </p>
                 </div>
               </div>
@@ -440,7 +479,7 @@
                   </h3>
                   <p class="text-gray-300">
                     Контролируйте использование устройств и наслаждайтесь
-                    семейным временем
+                    семейным временем - приложение работает по всему миру
                   </p>
                 </div>
               </div>
@@ -450,7 +489,7 @@
                 <a
                   href="#download"
                   class="inline-flex items-center gap-2 px-6 py-3 bg-accent hover:bg-accent-light rounded-xl transition-colors">
-                  <span>Начать использовать</span>
+                  <span>Начать бесплатно</span>
                   <i class="fas fa-arrow-right"></i>
                 </a>
               </div>
@@ -462,19 +501,29 @@
       <!-- Секция статистики -->
       <section class="py-20 bg-primary-light/30">
         <div class="container mx-auto px-6">
-          <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          <div class="text-center max-w-3xl mx-auto mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">
+              Family Balance по всему миру
+            </h2>
+            <p class="text-xl text-gray-300">
+              Присоединяйтесь к миллионам семей, которые уже используют наше
+              бесплатное приложение
+            </p>
+          </div>
+
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-8 text-center">
             <div>
               <div class="text-4xl md:text-5xl font-bold text-accent mb-2">
-                50K+
+                2M+
               </div>
               <div class="text-gray-300">Счастливых семей</div>
             </div>
-            <div>
+            <!-- <div>
               <div class="text-4xl md:text-5xl font-bold text-accent mb-2">
-                15+
+                150+
               </div>
               <div class="text-gray-300">Стран использования</div>
-            </div>
+            </div> -->
             <div>
               <div class="text-4xl md:text-5xl font-bold text-accent mb-2">
                 4.8
@@ -483,9 +532,25 @@
             </div>
             <div>
               <div class="text-4xl md:text-5xl font-bold text-accent mb-2">
-                24/7
+                $0
               </div>
-              <div class="text-gray-300">Поддержка пользователей</div>
+              <div class="text-gray-300">Стоимость приложения</div>
+            </div>
+          </div>
+
+          <!-- Карта мира (упрощенная) -->
+          <div class="mt-16 relative">
+            <div
+              class="globe-icon w-32 h-32 rounded-full mx-auto flex items-center justify-center">
+              <i class="fas fa-globe-americas text-white text-5xl"></i>
+            </div>
+            <div class="text-center mt-8">
+              <h3 class="text-2xl font-bold mb-4">Работает по всему миру</h3>
+              <p class="text-gray-300 max-w-2xl mx-auto">
+                Family Balance работает в любой точке мира. Независимо от того,
+                где вы находитесь, наше приложение поможет вашей семье найти
+                цифровой баланс.
+              </p>
             </div>
           </div>
         </div>
@@ -496,10 +561,11 @@
         <div class="container mx-auto px-6">
           <div class="text-center max-w-2xl mx-auto mb-16">
             <h2 class="text-4xl md:text-5xl font-bold mb-6">
-              Что говорят родители
+              Что говорят родители по всему миру
             </h2>
             <p class="text-xl text-gray-300">
-              Реальные отзывы от семей, которые уже используют Family Balance
+              Реальные отзывы от семей, которые уже используют бесплатную версию
+              Family Balance
             </p>
           </div>
 
@@ -508,18 +574,20 @@
             <div class="bg-white/5 p-8 rounded-2xl border border-white/10">
               <div class="flex items-center gap-4 mb-6">
                 <img
-                  src="./images/user1.jpg"
+                  src="./images/user.png"
                   alt="Пользователь"
                   class="w-12 h-12 rounded-full object-cover" />
                 <div>
                   <div class="font-bold">Мария Иванова</div>
-                  <div class="text-sm text-gray-400">Мама двоих детей</div>
+                  <div class="text-sm text-gray-400">
+                    Мама двоих детей, Россия
+                  </div>
                 </div>
               </div>
               <p class="text-gray-300 mb-4">
-                "Family Balance изменил нашу семейную жизнь. Теперь дети знают
-                границы использования гаджетов, и у нас стало больше времени для
-                общения."
+                "Невероятно, что такое мощное приложение полностью бесплатное!
+                Family Balance изменил нашу семейную жизнь. Теперь дети знают
+                границы использования гаджетов."
               </p>
               <div class="flex text-accent">
                 <i class="fas fa-star"></i>
@@ -534,18 +602,20 @@
             <div class="bg-white/5 p-8 rounded-2xl border border-white/10">
               <div class="flex items-center gap-4 mb-6">
                 <img
-                  src="./images/user2.jpg"
+                  src="./images/user.png"
                   alt="Пользователь"
                   class="w-12 h-12 rounded-full object-cover" />
                 <div>
                   <div class="font-bold">Алексей Петров</div>
-                  <div class="text-sm text-gray-400">Отец подростка</div>
+                  <div class="text-sm text-gray-400">
+                    Отец подростка, Казахстан
+                  </div>
                 </div>
               </div>
               <p class="text-gray-300 mb-4">
                 "Отличное приложение! Особенно нравится функция отслеживания
-                местоположения - теперь я спокоен, зная, где находится мой сын
-                после школы."
+                местоположения. И самое главное - оно бесплатное! Рекомендую
+                всем родителям."
               </p>
               <div class="flex text-accent">
                 <i class="fas fa-star"></i>
@@ -560,18 +630,20 @@
             <div class="bg-white/5 p-8 rounded-2xl border border-white/10">
               <div class="flex items-center gap-4 mb-6">
                 <img
-                  src="./images/user3.jpg"
+                  src="./images/user.png"
                   alt="Пользователь"
                   class="w-12 h-12 rounded-full object-cover" />
                 <div>
                   <div class="font-bold">Ольга Сидорова</div>
-                  <div class="text-sm text-gray-400">Мама троих детей</div>
+                  <div class="text-sm text-gray-400">
+                    Мама троих детей, Украина
+                  </div>
                 </div>
               </div>
               <p class="text-gray-300 mb-4">
-                "Наконец-то нашла решение, которое действительно работает! Дети
-                стали более ответственными в использовании технологий, и наши
-                отношения улучшились."
+                "Наконец-то нашла решение, которое действительно работает и при
+                этом бесплатное! Дети стали более ответственными в использовании
+                технологий."
               </p>
               <div class="flex text-accent">
                 <i class="fas fa-star"></i>
@@ -589,12 +661,19 @@
       <section class="py-20 bg-primary-light/30" id="download">
         <div class="container mx-auto px-6">
           <div class="max-w-4xl mx-auto text-center">
+            <div
+              class="free-badge inline-flex items-center gap-2 rounded-full px-6 py-3 mb-6">
+              <i class="fas fa-crown"></i>
+              <span class="font-medium">Полностью бесплатное приложение</span>
+            </div>
+
             <h2 class="text-4xl md:text-5xl font-bold mb-6">
-              Начните использовать Family Balance сегодня
+              Скачайте Family Balance бесплатно
             </h2>
             <p class="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
-              Присоединяйтесь к тысячам семей, которые уже нашли цифровой баланс
-              с нашим приложением
+              Присоединяйтесь к миллионам семей по всему миру, которые уже нашли
+              цифровой баланс с нашим приложением. Никаких платежей, скрытых
+              комиссий или подписок.
             </p>
 
             <div class="flex flex-col sm:flex-row gap-6 justify-center">
@@ -618,6 +697,10 @@
               </a>
             </div>
 
+            <div class="mt-8 text-gray-300">
+              <p>Доступно по всему миру • Бесплатно навсегда</p>
+            </div>
+
             <div
               class="mt-12 flex flex-col md:flex-row gap-8 justify-center items-center">
               <div class="flex items-center gap-3">
@@ -629,8 +712,12 @@
                 <span>Бесплатные обновления</span>
               </div>
               <div class="flex items-center gap-3">
-                <i class="fas fa-headset text-accent"></i>
-                <span>Поддержка 24/7</span>
+                <i class="fas fa-globe-americas text-accent"></i>
+                <span>Работает по всему миру</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <i class="fas fa-dollar-sign text-accent"></i>
+                <span>Полностью бесплатно</span>
               </div>
             </div>
           </div>
@@ -649,11 +736,17 @@
                 class="w-10 h-10 bg-accent rounded-xl flex items-center justify-center">
                 <i class="fas fa-family text-white text-xl"></i>
               </div>
-              <span class="text-xl font-bold">Family Balance</span>
+              <div>
+                <span class="text-xl font-bold">Family Balance</span>
+                <div class="text-xs text-accent font-medium">
+                  Бесплатное приложение для родителей по всему миру
+                </div>
+              </div>
             </div>
             <p class="text-gray-300 mb-6 max-w-md">
-              Помогаем семьям находить гармонию между цифровым миром и реальной
-              жизнью через умный родительский контроль.
+              Помогаем семьям по всему миру находить гармонию между цифровым
+              миром и реальной жизнью через умный родительский контроль.
+              Полностью бесплатно.
             </p>
             <div class="flex gap-4">
               <a
@@ -708,7 +801,7 @@
                 <a
                   href="#download"
                   class="text-gray-300 hover:text-accent transition-colors"
-                  >Скачать</a
+                  >Скачать бесплатно</a
                 >
               </li>
             </ul>
@@ -752,7 +845,10 @@
 
         <div
           class="pt-8 mt-8 border-t border-white/10 text-center text-gray-400">
-          <p>© 2025 Family Balance App. Все права защищены.</p>
+          <p>
+            © 2025 Family Balance App. Все права защищены. Бесплатное
+            приложение, доступное по всему миру.
+          </p>
         </div>
       </div>
     </footer>
